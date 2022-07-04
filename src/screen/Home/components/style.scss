@@ -1,0 +1,73 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 64%;
+  }
+
+  &__select {
+    align-self: flex-start;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .loader {
+    position: relative;
+    top: 200px;
+  }
+
+  @include media-desktop {
+    &__select {
+      font-size: 20px;
+
+      &-menu {
+        width: 20%;
+      }
+    }
+  }
+
+  @include media-table-large {
+    &__container {
+      width: 90%;
+    }
+
+    &__select {
+      font-size: 20px;
+    }
+  }
+
+  @include media-table-large {
+    &__select-menu {
+      width: 25%;
+    }
+  }
+
+  @include media-table-small {
+    &__select-menu {
+      width: 35%;
+    }
+  }
+
+  @include media-mobile-large {
+    &__select-menu {
+      width: 40%;
+    }
+  }
+
+  @include media-mobile-small {
+    &__select-menu {
+      width: 45%;
+    }
+  }
+}

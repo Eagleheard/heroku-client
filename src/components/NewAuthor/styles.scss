@@ -1,0 +1,152 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.new-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__image-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+    }
+
+    &__main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__additional-info {
+        width: 13vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__group {
+        position: relative;
+    }
+
+    &__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        margin-left: 10px;
+        color: $gray;
+    }
+
+    &__select {
+      padding: 0;
+      margin: 5px 0;
+
+      &-menu {
+        width: 25%;
+        margin-top: 5px;
+        z-index: 1;
+      }
+    }
+
+    &__name,
+    &__location,
+    &__description {
+      height: 40px;
+      width: 100%;
+      border: 2px solid $search-primary;
+      border-radius: 5px;
+      outline: none;
+      background: $primary;
+      margin: 10px 0 10px;
+      padding: 0 10px;
+      font-family: $lato;
+  
+      &--error {
+        position: relative;
+        bottom: 7px;
+        font-family: $lato;
+        font-size: 12px;
+        color: $red;
+        margin: 0 0 10px 10px;
+      }
+  
+      &::placeholder {
+        color: transparent;
+      }
+  
+      &:placeholder-shown ~ .new-author__label {
+        font-size: 12px;
+        cursor: text;
+        top: 21px;
+        font-family: $lato;
+        margin-left: 10px;
+      }
+  
+      &:focus ~ .new-author__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        color: $gray;
+      }
+  
+      &:focus ~ .new-author__label {
+        color: $search-primary;
+      }
+    }
+
+    &__image {
+        width: 80%;
+        height: 80%;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+        }
+    }
+
+    
+    &__description {
+      height: 20vh;
+      resize: none;
+      padding: 5px 10px;
+    }
+
+    &__upload-label {
+        color: $blue;
+        margin-top: 10px;
+        font-family: $lato;
+        cursor: pointer;
+    }
+
+    &__upload-input {
+        display: none;
+    }
+
+    &__submit {
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+}

@@ -1,0 +1,45 @@
+@import './const-styles.scss';
+
+.link {
+  color: $primary;
+  font-size: 18px;
+  font-family: $lato;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 30px;
+
+  &.active {
+    color: $search-primary;
+  }
+
+  &:hover {
+    color: $hover-link;
+  }
+}
+
+.admin {
+  &__link {
+    color: $light-gray;
+    font-family: $lato;
+    font-size: 16px;
+    text-decoration: none;
+
+    &.active {
+      color: $secondary;
+    }
+
+    &:hover {
+      color: $button;
+    }
+  }
+
+  &__button {
+    color: $black;
+    text-decoration: none;
+
+    &.active {
+      color: $secondary;
+    }
+  }
+}

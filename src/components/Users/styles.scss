@@ -1,0 +1,35 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.users {
+
+    &__photo {
+        border-radius: 10px;
+        width: 90px;
+        height: 11vh;
+    }
+
+    &__status {
+        margin: 0;
+        align-self: center;
+        border-radius: 10px;
+        font-family: $lato;
+        cursor: pointer;
+
+        &--active {
+            background-color: $light-green;
+
+            &:hover {
+                background-color: $green;
+            }
+        }
+
+        &--blocked {
+            background-color: $light-red;
+
+            &:hover {
+                background-color: $red;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__form {
+        width: 100%;
+    }
+    
+    &__group {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    &__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        margin-left: 10px;
+        color: $gray;
+    }
+
+    &__price,
+    &__count {
+      height: 40px;
+      width: 100%;
+      border: 2px solid $search-primary;
+      border-radius: 5px;
+      outline: none;
+      background: $primary;
+      margin: 10px 0 5px;
+      padding: 0 10px;
+      font-family: $lato;
+  
+      &--error {
+        position: relative;
+        bottom: 7px;
+        font-family: $lato;
+        font-size: 12px;
+        color: $red;
+        margin: 0 0 10px 10px;
+      }
+  
+      &::placeholder {
+        color: transparent;
+      }
+  
+      &:placeholder-shown ~ .discount__label {
+        font-size: 12px;
+        cursor: text;
+        top: 21px;
+        font-family: $lato;
+        margin-left: 10px;
+      }
+  
+      &:focus ~ .discount__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        color: $gray;
+      }
+  
+      &:focus ~ .discount__label {
+        color: $search-primary;
+      }
+    }
+    
+    &__submit {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+    }
+
+    .search {
+        width: 100%;
+    }
+}

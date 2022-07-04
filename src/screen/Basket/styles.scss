@@ -1,0 +1,255 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  border-radius: 10px;
+  width: 100%;
+  background: $primary;
+  text-decoration: none;
+  color: $black;
+
+  &__container {
+    width: 65%;
+    height: 110vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+    margin-top: 20px;
+    box-shadow: 0 0 10px $black;
+  }
+
+  &__games {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    overflow: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    font-family: $lato;
+
+    &-price {
+      margin-top: 10px;
+    }
+  }
+
+  &__total-price {
+    font-family: $lato;
+    margin-top: 30px;
+  }
+
+  &__label {
+    display: block;
+    transition: 0.2s;
+    font-family: $lato;
+    font-size: 12px;
+    margin-left: 10px;
+    color: $gray;
+  }
+
+  &__delivery {
+    font-family: $lato;
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-info {
+      margin-top: 10px;
+    }
+
+    &-input {
+      height: 40px;
+      width: 100%;
+      border: 2px solid $search-primary;
+      border-radius: 5px;
+      outline: none;
+      background: $primary;
+      margin: 10px 0 10px;
+      padding: 0 10px;
+      font-family: $lato;
+
+      &--error {
+        position: relative;
+        font-family: $lato;
+        font-size: 12px;
+        color: $red;
+        margin: 0 0 10px 10px;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:placeholder-shown ~ .basket__label {
+        font-size: 12px;
+        cursor: text;
+        font-family: $lato;
+        margin-left: 10px;
+      }
+
+      &:focus ~ .basket__label {
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        color: $gray;
+      }
+    }
+  }
+
+  &__order-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 90%;
+    margin: 10px;
+    align-self: center;
+    justify-content: space-between;
+
+    &__description {
+      height: 15vh;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__remove-btn {
+      align-self: flex-end;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__main-information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 0;
+      height: 15vh;
+      width: 100%;
+    }
+
+    &__additional-information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 40%;
+    }
+
+    &__img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__price {
+      padding: 8px 0;
+    }
+
+    &__name {
+      padding: 0;
+    }
+
+    &__type {
+      margin-top: 5px;
+      font-size: 12px;
+      padding: 0;
+    }
+
+    &__quantity {
+      margin-top: auto;
+
+      &-value {
+        display: flex;
+        flex-direction: row;
+        margin-top: auto;
+      }
+    }
+  }
+
+  @include media-desktop {
+    &__container {
+      width: 90%;
+    }
+  }
+
+  @include media-table-large {
+    &__container {
+      width: 95%;
+    }
+
+    &_game {
+      width: 35%;
+    }
+
+    .navigation__search,
+    .navigation__clear {
+      width: 35%;
+      font-size: 11px;
+      height: 40px;
+    }
+  }
+
+  @include media-table-small {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__games {
+      width: 100%;
+    }
+
+    &__info {
+      margin-top: 20px;
+      width: 100%;
+      align-items: center;
+    }
+
+    &__payment {
+      align-items: center;
+    }
+
+    &__delivery {
+      margin-left: 20px;
+
+      &-info {
+        margin: 10px 20px;
+        width: 90%;
+      }
+    }
+
+    &__order {
+      margin: 0 20px;
+    }
+
+    &__total-price {
+      margin: 10px 0 10px;
+      font-size: 20px;
+    }
+  }
+}

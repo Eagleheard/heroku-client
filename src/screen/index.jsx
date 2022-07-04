@@ -1,0 +1,9 @@
+export { Home } from 'screen/Home/components';
+export { Author } from 'screen/Author/components';
+export { Store } from 'screen/Store/components';
+export { About } from 'screen/About/components';
+export { Card } from 'screen/Game/components/gameCard.tsx';
+export { GamePage } from 'screen/Game/components/index.tsx';
+export { Profile } from 'screen/Profile';
+export { Basket } from 'screen/Basket';
+export { AdminPanel } from 'screen/AdminPanel';

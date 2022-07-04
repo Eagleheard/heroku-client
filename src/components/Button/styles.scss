@@ -1,0 +1,312 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.navigation {
+  background: $secondary;
+  align-self: center;
+  color: $primary;
+  border: 2px solid $secondary;
+  padding: 5px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  margin: 0 5px;
+  cursor: pointer;
+
+  &__prev-btn {
+    position: absolute;
+    left: 0;
+  }
+
+  &__next-btn {
+    position: absolute;
+    right: 0;
+  }
+
+  &__pagination-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__profile {
+    position: relative;
+    height: 5%;
+    width: 20%;
+    font-family: $lato;
+    background: $primary;
+    color: $black;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid $search-primary;
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  &__cart-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &:disabled {
+    background-color: $search-primary;
+    border: 2px solid $search-primary;
+    pointer-events: none;
+  }
+
+  &__search {
+    height: 5%;
+    border: none;
+    font-family: $lato;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  &__admin-search {
+    width: 30%;
+    border: none;
+    font-family: $lato;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__admin-clear {
+    width: 30%;
+    font-family: $lato;
+    background: $primary;
+    color: $black;
+    border-radius: 5px;
+    border: 2px solid $search-primary;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__admin-sign-in {
+    height: 3%;
+    width: 35%;
+    border: none;
+    font-family: $lato;
+    font-size: 14px;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__discount {
+    height: 3%;
+    width: 20%;
+    border: none;
+    font-family: $lato;
+    font-size: 14px;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__clear {
+    height: 5%;
+    font-family: $lato;
+    background: $primary;
+    color: $black;
+    border-radius: 5px;
+    border: 2px solid $search-primary;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__card-buy {
+    font-family: $lato;
+    width: 50%;
+    border-radius: 5px;
+    margin: 0;
+    background-color: $secondary;
+    border: 2px solid $secondary;
+    color: $primary;
+
+    &--disabled {
+      font-family: $lato;
+      width: 50%;
+      border-radius: 5px;
+      margin: 0;
+      background-color: $search-primary;
+      border: 2px solid $search-primary;
+    }
+  }
+
+  &__buy {
+    border: none;
+    font-family: $lato;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 0;
+    width: 40%;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  &__send {
+    align-self: flex-end;
+    border-radius: 5px;
+    width: 15%;
+    height: 30px;
+  }
+
+  &__sign-in {
+    height: 3%;
+    width: 35%;
+    border: none;
+    font-family: $lato;
+    font-size: 14px;
+    background: $secondary;
+    color: $primary;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+
+    @include media-mobile-large {
+      height: 30px;
+    }
+  }
+
+  @include media-table-large {
+    width: 35px;
+    height: 35px;
+
+    &__pagination-btn {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__card-buy {
+      font-size: 10px;
+    }
+
+    &__search,
+    &__clear {
+      width: 30%;
+    }
+  }
+
+  &__back-btn {
+    background-color: $secondary;
+    border: 2px solid $search-primary;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  @include media-table-large {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+
+    &__pagination-btn {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__cart-btn {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__search,
+    &__clear {
+      width: 30%;
+    }
+
+    &__buy {
+      width: 50%;
+      height: 4vh;
+      align-self: flex-start;
+    }
+
+    &__profile {
+      width: 45%;
+    }
+
+    &__send {
+      margin-top: 0;
+      width: 20%;
+      padding: 5px 0;
+    }
+  }
+
+  @include media-table-small {
+    &__buy {
+      width: 50%;
+      font-size: 12px;
+    }
+  }
+
+  &__search,
+  &__clear {
+    width: 30%;
+  }
+
+  @include media-mobile-small {
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+    padding: 0;
+
+    &__pagination-btn {
+      width: 15px;
+      height: 15px;
+      font-size: 8px;
+      padding: 0;
+    }
+
+    &__card-buy {
+      font-size: 10px;
+      height: 35px;
+      width: 35px;
+    }
+
+    &__search,
+    &__clear {
+      font-size: 12px;
+      height: 25px;
+      width: 30%;
+    }
+
+    &__buy {
+      width: 20vw;
+      height: 4vh;
+      font-size: 12px;
+      padding: 5px;
+      align-self: flex-start;
+    }
+
+    &__profile {
+      width: 40%;
+      font-size: 12px;
+      padding: 0;
+    }
+
+    &__send {
+      width: 20%;
+      height: 30px;
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+}

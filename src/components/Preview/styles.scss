@@ -1,0 +1,159 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries';
+
+.preview {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 357px;
+  width: 100%;
+  margin: 10px 0 20px;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 1s, opacity 1s 0ms;
+
+    &--active {
+      height: 100%;
+      opacity: 1;
+      transition: height 0ms 0ms, opacity 800ms 0ms;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: transparent;
+      background-image: linear-gradient(to right, transparent 0%, $secondary 80%);
+    }
+  }
+
+  &__name {
+    &--link {
+      text-decoration: none;
+      color: $primary;
+
+      &:hover {
+        color: $search-primary;
+      }
+    }
+
+    &__description {
+      position: absolute;
+      background: transparent;
+      background-image: linear-gradient(to right, transparent 0%, $secondary 80%);
+    }
+  }
+
+  &__description {
+    position: absolute;
+    align-self: center;
+    color: $primary;
+    font-family: $lato;
+    text-align: center;
+    right: 70px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+
+    &-label {
+      font-family: $lato;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-information {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &--old {
+      font-family: $lato;
+      text-decoration: line-through;
+      font-size: 16px;
+    }
+
+    &--new {
+      font-family: $lato;
+      font-weight: bold;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  @include media-desktop-large {
+    width: 100%;
+  }
+
+  @include media-table-large {
+    height: 300px;
+
+    &__description {
+      right: 50px;
+    }
+  }
+
+  @include media-table-small {
+    height: 250px;
+
+    &__description {
+      font-size: 12px;
+    }
+
+    &__price {
+
+      &-label {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @include media-mobile-large {
+    height: 200px;
+
+    &__description {
+      font-size: 10px;
+    }
+  }
+
+  @include media-mobile-small {
+    height: 150px;
+
+    &__description {
+      font-size: 6px;
+      right: 30px;
+    }
+
+    &__price {
+
+      &-label {
+        font-size: 6px;
+      }
+    }
+  }
+}

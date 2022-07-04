@@ -1,0 +1,19 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries';
+
+.search {
+  width: 25%;
+  margin-bottom: 10px;
+
+  &__input {
+    border-radius: 5px;
+  }
+
+  @include media-table-large {
+    width: 60%;
+
+    .autocomplete {
+      width: 100%;
+    }
+  }
+}

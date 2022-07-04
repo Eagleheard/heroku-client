@@ -1,0 +1,141 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 0 10px $black;
+  background: $primary;
+  text-decoration: none;
+  color: $black;
+
+  &__img {
+    border-radius: 25% 10%;
+    margin: 10px;
+    width: 180px;
+    height: 180px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: row;
+    font-family: $lato;
+  }
+
+  &__name,
+  &__price,
+  &__quantity,
+  &__type {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  &__genre {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  &__author {
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    color: $black;
+
+    &--link {
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        color: $hover-link;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: row;
+    font-family: $lato;
+  }
+
+  &__name,
+  &__price {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 10px;
+
+    &--link {
+      text-decoration: none;
+      color: $black;
+
+      &:hover {
+        color: $hover-link;
+      }
+    }
+  }
+
+  @include media-desktop {
+    &__img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  @include media-table-large {
+    &__img {
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+  @include media-table-small {
+    &__img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  @include media-mobile-large {
+    box-shadow: 0 0 5px $black;
+
+    &__img {
+      width: 145px;
+      height: 145px;
+    }
+
+    &__name,
+    &__price {
+      font-size: 12px;
+    }
+
+    &__genre,
+    &__author {
+      font-size: 10px;
+    }
+  }
+
+  @include media-mobile-small {
+    margin: 20px 0;
+
+    &__img {
+      margin: 20px;
+      width: 250px;
+      height: 290px;
+    }
+
+    &__name,
+    &__price {
+      font-size: 18px;
+    }
+
+    &__genre,
+    &__author {
+      font-size: 14px;
+      padding: 20px;
+    }
+  }
+}

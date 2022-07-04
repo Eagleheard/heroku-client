@@ -1,0 +1,134 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__form {
+    width: 80%;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: -5px;
+    display: block;
+    transition: 0.2s;
+    font-family: $lato;
+    font-size: 12px;
+    margin-left: 10px;
+    color: $gray;
+  }
+
+  &__error {
+    font-family: $lato;
+    color: $red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__email,
+  &__password,
+  &__name,
+  &__lastname {
+    height: 40px;
+    width: 100%;
+    border: 2px solid $search-primary;
+    border-radius: 5px;
+    outline: none;
+    background: $primary;
+    margin: 10px 0 10px;
+    padding: 0 10px;
+    font-family: $lato;
+
+    &--error {
+      position: relative;
+      bottom: 7px;
+      font-family: $lato;
+      font-size: 12px;
+      color: $red;
+      margin: 0 0 10px 10px;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .login__label {
+      font-size: 12px;
+      cursor: text;
+      top: 23px;
+      font-family: $lato;
+      margin-left: 10px;
+    }
+
+    &:focus ~ .login__label {
+      position: absolute;
+      top: -5px;
+      display: block;
+      transition: 0.2s;
+      font-family: $lato;
+      font-size: 12px;
+      color: $gray;
+    }
+
+    &:focus ~ .login__label {
+      color: $search-primary;
+    }
+  }
+
+  &__sign {
+    font-family: $lato;
+    color: $secondary;
+    margin-right: 3px;
+
+    &--link {
+      font-family: $lato;
+      color: $secondary;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__sign-up {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 10px;
+
+    &--admin {
+      justify-content: flex-end;
+    }
+  }
+
+  .navigation__sign-in {
+    height: 3%;
+    width: 35%;
+    border: none;
+    font-family: $lato;
+    font-size: 14px;
+    background: $secondary;
+    justify-self: flex-end;
+    color: $primary;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+
+    @include media-mobile-large {
+      height: 30px;
+    }
+  }
+}

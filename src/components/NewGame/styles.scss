@@ -1,0 +1,205 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.new-game {
+    display: flex;
+    flex-direction: column;
+
+    &__preview {
+      font-family: $lato;
+      margin-bottom: 10px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__main-image,
+    &__preview-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      width: 50%;
+    }
+
+    &__image-info {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &__main-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    &__additional-info {
+        width: 73%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__group {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    &__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        margin-left: 10px;
+        color: $gray;
+    }
+
+    &__description-block,
+    &__name-block {
+      width: 73%;
+    }
+
+    &__description-count {
+      opacity: 0.7;
+      font-size: 13px;
+      font-family: $lato;
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+    }
+
+    &__name,
+    &__price,
+    &__count,
+    &__description,
+    &__popularity {
+      height: 40px;
+      width: 100%;
+      border: 2px solid $search-primary;
+      border-radius: 5px;
+      outline: none;
+      background: $primary;
+      margin: 10px 0 5px;
+      padding: 0 10px;
+      font-family: $lato;
+  
+      &--error {
+        position: relative;
+        bottom: 7px;
+        font-family: $lato;
+        font-size: 12px;
+        color: $red;
+        margin: 0 0 10px 10px;
+      }
+  
+      &::placeholder {
+        color: transparent;
+      }
+  
+      &:placeholder-shown ~ .new-game__label {
+        font-size: 12px;
+        cursor: text;
+        top: 21px;
+        font-family: $lato;
+        margin-left: 10px;
+      }
+  
+      &:focus ~ .new-game__label {
+        position: absolute;
+        top: -5px;
+        display: block;
+        transition: 0.2s;
+        font-family: $lato;
+        font-size: 12px;
+        color: $gray;
+      }
+  
+      &:focus ~ .new-game__label {
+        color: $search-primary;
+      }
+    }
+
+    &__image {
+        width: 12vw;
+        height: 20vh;
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+        }
+    }
+
+    &__errors {
+      width: 100%;
+      font-size: 12px;
+      color: $red;
+      margin-left: 10px;
+    }
+    
+    &__description {
+      height: 20vh;
+      resize: none;
+      padding: 5px 10px;
+    }
+
+    &__author-block {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__author {
+      font-family: $lato;
+
+      &--link {
+        font-family: $lato;
+        margin-left: 5px;
+        color: $hover-link;
+        cursor: pointer;
+
+        &:hover {
+          color: $button;
+        }
+      }
+    }
+
+    &__upload-label {
+        color: $blue;
+        margin-top: 10px;
+        font-family: $lato;
+        cursor: pointer;
+    }
+
+    &__upload-input {
+        display: none;
+    }
+
+    &__submit {
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+}

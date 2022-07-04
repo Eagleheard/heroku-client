@@ -1,0 +1,43 @@
+@import './const-styles.scss';
+
+@mixin media-desktop-large {
+  @media (max-width: $desktop-width-large) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin media-table-large {
+  @media (max-width: $table-width-large) {
+    @content;
+  }
+}
+
+@mixin media-table-small {
+  @media (max-width: $table-width-small) {
+    @content;
+  }
+}
+
+@mixin media-mobile-large {
+  @media (max-width: $mobile-width-large) {
+    @content;
+  }
+}
+
+@mixin media-mobile-middle {
+  @media (max-width: $mobile-width-middle) {
+    @content;
+  }
+}
+
+@mixin media-mobile-small {
+  @media (max-width: $mobile-width-small) {
+    @content;
+  }
+}

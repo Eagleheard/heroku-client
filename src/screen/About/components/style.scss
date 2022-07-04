@@ -1,0 +1,150 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px $black;
+    width: 64%;
+    margin-top: 10px;
+    height: 123vh;
+  }
+
+  &__first-gamepad {
+    width: 35%;
+  }
+
+  &__second-gamepad {
+    align-self: flex-start;
+    width: 35%;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-family: $lato;
+  }
+
+  &__main-description {
+    font-family: $lato;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &-text {
+      width: 80%;
+      margin-left: 20px;
+    }
+  }
+
+  &__additional-description {
+    font-family: $lato;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &-text {
+      width: 80%;
+      margin-right: 20px;
+      text-align: end;
+    }
+  }
+
+  &__link {
+    color: $secondary;
+    font-size: 18px;
+    font-family: $lato;
+    text-decoration: underline;
+    margin-left: 5px;
+  
+    &.active {
+      color: $search-primary;
+    }
+  
+    &:hover {
+      color: $hover-link;
+    }
+    
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 18px;
+      flex-direction: row;
+    }
+  }
+
+  &__contact {
+    font-size: 32px;
+    font-family: $lato;
+
+    &--link {
+      cursor: pointer;
+      margin-top: 10px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include media-table-large {
+
+    &__container {
+      width: 90%;
+    }
+  }
+
+  @include media-table-small {
+
+    &__main-description {
+      font-size: 12px;
+    }
+
+    &__additional-description {
+      font-size: 12px;
+    }
+
+    &__link-container {
+      font-size: 12px;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__contact {
+      font-size: 28px;
+
+      &--link {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @include media-mobile-large {
+
+    &__first-gamepad {
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+
+    &__main-description,
+    &__additional-description {
+      flex-direction: column;
+
+      &-text {
+        text-align: center;
+      }
+    }
+  }
+}

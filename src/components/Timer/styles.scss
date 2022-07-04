@@ -1,0 +1,17 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $lato;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    &__container {
+        font-family: $lato;
+        font-size: 20px;
+    }
+}

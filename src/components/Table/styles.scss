@@ -1,0 +1,35 @@
+@import 'constants/const-styles';
+@import 'constants/media-queries';
+
+.table {
+    display: flex;
+    flex-direction: column;
+
+    &__close-btn {
+        align-self: flex-end;
+        position: relative;
+        right: 10px;
+        top: 43px;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__cell {
+
+        &--icon {
+            cursor: pointer;
+
+            &:hover {
+                background-color: $gray;
+                border-radius: 50%;
+            }
+
+        }
+    }
+}

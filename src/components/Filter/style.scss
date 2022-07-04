@@ -1,0 +1,71 @@
+@import 'constants/const-styles';
+@import 'constants/media-queries.scss';
+
+.filter {
+  background-color: $primary;
+  box-shadow: 0 0 10px $black;
+  width: 15%;
+  align-self: flex-start;
+  margin: 75px 50px 0 0;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  &__select {
+    margin: 10px 0;
+    width: 60%;
+    font-size: 16px;
+  }
+
+  &__digital,
+  &__disk {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    font-family: $lato;
+    justify-content: space-between;
+  }
+
+  &__copies {
+    padding: 0 5px;
+    margin: 10px 0;
+    height: 20px;
+    border: 2px solid $search-primary;
+    background: $primary;
+  }
+
+  &__price {
+    display: flex;
+    margin: 10px 0;
+
+    &-min,
+    &-max {
+      margin-right: 10px;
+      padding: 10px 5px;
+      width: 40%;
+      height: 20px;
+      border: 2px solid $search-primary;
+      background: $primary;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 10px 0;
+  }
+
+  @include media-desktop {
+    width: 25%;
+  }
+
+  @include media-table-large {
+    display: none;
+  }
+}

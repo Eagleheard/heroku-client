@@ -1,0 +1,117 @@
+@import 'constants/const-styles.scss';
+@import 'constants/media-queries.scss';
+
+.store {
+  display: flex;
+  flex-direction: row;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &__select {
+    justify-self: flex-end;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__error {
+    font-size: 30px;
+    margin-top: 200px;
+    font-family: $lato;
+    align-self: center;
+  }
+
+  .loader {
+    position: relative;
+    width: 70vw;
+    height: 70vh;
+  }
+
+  .card {
+    margin-top: 20px;
+  }
+
+  &__filter-icon {
+    display: none;
+    align-self: flex-end;
+    width: 40px;
+  }
+
+  @include media-table-large {
+    justify-content: center;
+
+    &__container {
+      width: 90%;
+    }
+
+    &__error {
+      align-self: center;
+    }
+
+    &__options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__select {
+      font-size: 16px;
+    }
+
+    &__filter-icon {
+      display: block;
+      width: 30px;
+    }
+
+    .card {
+      margin: 10px 0;
+
+      &__img {
+        width: 90%;
+      }
+    }
+
+    .loader {
+      left: 40px;
+    }
+  
+  }
+
+  @include media-table-small {
+    &__select {
+      font-size: 16px;
+    }
+
+    &__filter-icon {
+      width: 25px;
+    }
+  }
+
+  @include media-mobile-small {
+    &__select {
+      font-size: 12px;
+    }
+
+    .card {
+      &__img {
+        height: 180px;
+      }
+    }
+  }
+}
